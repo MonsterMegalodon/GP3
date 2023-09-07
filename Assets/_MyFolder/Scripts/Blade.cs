@@ -11,6 +11,7 @@ public class Blade : MonoBehaviour
     private bool cutting;
 
     public Vector3 direction { get; private set; }
+    public float cutForce = 5f;
     public float minCutVelocity = 0.25f;
 
 
