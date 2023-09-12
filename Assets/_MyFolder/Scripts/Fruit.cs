@@ -13,6 +13,9 @@ public class Fruit : MonoBehaviour
     private Collider fruitCollider;
     private ParticleSystem juiceParticalEffect;
 
+    [SerializeField] float heightLimit = 20f;
+    [SerializeField] float heightSpeedReduceRange = 20f;
+
     private void Awake()
     {
         fruitRigidbody = GetComponent<Rigidbody>();
@@ -36,6 +39,7 @@ public class Fruit : MonoBehaviour
         {
             slice.velocity = fruitRigidbody.velocity;
             slice.AddForceAtPosition(direction * force, position, ForceMode.Impulse);
+            slice.velocity = new Vector3(slice.velocity.x, slice.velocity.y / 10, slice.velocity.z);
         }
     }
 
@@ -45,6 +49,16 @@ public class Fruit : MonoBehaviour
         {
             Blade blade = other.GetComponent<Blade>();
             Sliced(blade.direction, blade.transform.position, blade.cutForce);
+        }
+    }
+
+    private void Update()
+    {
+        float distanceToTop = heightLimit - transform.position.y;
+        if(distanceToTop < heightSpeedReduceRange)
+        {
+            float reduceFactor = distanceToTop / heightSpeedReduceRange;
+            fruitRigidbody.velocity = new Vector3(fruitRigidbody.velocity.x, fruitRigidbody.velocity.y * reduceFactor, fruitRigidbody.velocity.z);
         }
     }
 

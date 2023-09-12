@@ -15,7 +15,7 @@ public class Spawner : MonoBehaviour
     public float maxAngle = 15f;
 
     public float minForce = 15f;
-    public float maxForce = 25f;
+    public float maxForce = 20f;
 
     public float maxLifetime = 1f;
 
