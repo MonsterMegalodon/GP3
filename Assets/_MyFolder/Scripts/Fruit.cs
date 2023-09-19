@@ -13,6 +13,8 @@ public class Fruit : MonoBehaviour
     private Collider fruitCollider;
     private ParticleSystem juiceParticalEffect;
 
+    public int points = 1; 
+
     [SerializeField] float heightLimit = 50f;
     [SerializeField] float heightSpeedReduceRange = 20f;
 
@@ -24,6 +26,8 @@ public class Fruit : MonoBehaviour
     }
     private void Sliced(Vector3 direction, Vector3 position, float force)
     {
+        FindObjectOfType<GameManager>().IncreaseScore(points);
+
         whole.SetActive(false);
         sliced.SetActive(true);
 

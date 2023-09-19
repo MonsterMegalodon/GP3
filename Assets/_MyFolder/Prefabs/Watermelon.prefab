@@ -64,6 +64,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4297987485617838108, guid: 30b08a3b590717343916a2c390491228, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297987485617838108, guid: 30b08a3b590717343916a2c390491228, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297987485617838108, guid: 30b08a3b590717343916a2c390491228, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6191362644068517345, guid: 30b08a3b590717343916a2c390491228, type: 3}
       propertyPath: m_Name
       value: Watermelon
@@ -80,6 +92,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 2b5d0b653a5977646a65df7099ff3c3d, type: 2}
+    - target: {fileID: 9154230425881584415, guid: 30b08a3b590717343916a2c390491228, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9154230425881584415, guid: 30b08a3b590717343916a2c390491228, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9154230425881584415, guid: 30b08a3b590717343916a2c390491228, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
