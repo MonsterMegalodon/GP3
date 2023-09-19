@@ -15,9 +15,14 @@ public class GameManager : MonoBehaviour
 
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    public GameObject DeathMenuUI;
+    public static GameManager Instance;
 
     private void Start()
     {
+        if (Instance == null)
+            Instance = this;
+        else Destroy(this);
         NewGame();
         highScoreText.text = ("HighScore ") + scoreKeeper.GetHighScore();
     }
@@ -51,6 +56,14 @@ public class GameManager : MonoBehaviour
         GameIsPaused = false;
     }
 
+    public void GameOver()
+    {
+        DeathMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+
+    }
+
     public void QuitGame()
     {
         Application.Quit();
@@ -68,16 +81,8 @@ public class GameManager : MonoBehaviour
 
     private void NewGame()
     {
-
-        //if (score > scoreKeeper.GetHighScore())
-        //{
-        //    scoreKeeper.SetScore(score);
-        //}
-
         score = 0;
         scoreText.text = score.ToString();
-
-
     }
 
     public void IncreaseScore(int amount)

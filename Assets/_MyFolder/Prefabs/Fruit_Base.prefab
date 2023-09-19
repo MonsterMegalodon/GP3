@@ -4900,7 +4900,7 @@ GameObject:
   - component: {fileID: -1124374618200469002}
   m_Layer: 0
   m_Name: Fruit_Base
-  m_TagString: Untagged
+  m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4985,6 +4985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whole: {fileID: 3525848416206914214}
   sliced: {fileID: 8377131532444170661}
+  points: 1
   heightLimit: 32
   heightSpeedReduceRange: 25
 --- !u!1001 &4336752748548472823
@@ -5040,8 +5041,8 @@ PrefabInstance:
       value: Whole
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7722b7241222eae4aa3f0e30ff00ae1d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      propertyPath: m_TagString
+      value: Fruit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
