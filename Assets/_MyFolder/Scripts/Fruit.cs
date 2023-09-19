@@ -13,7 +13,7 @@ public class Fruit : MonoBehaviour
     private Collider fruitCollider;
     private ParticleSystem juiceParticalEffect;
 
-    [SerializeField] float heightLimit = 20f;
+    [SerializeField] float heightLimit = 50f;
     [SerializeField] float heightSpeedReduceRange = 20f;
 
     private void Awake()

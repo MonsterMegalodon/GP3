@@ -4985,6 +4985,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whole: {fileID: 3525848416206914214}
   sliced: {fileID: 8377131532444170661}
+  heightLimit: 32
+  heightSpeedReduceRange: 25
 --- !u!1001 &4336752748548472823
 PrefabInstance:
   m_ObjectHideFlags: 0
